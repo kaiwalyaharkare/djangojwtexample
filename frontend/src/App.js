@@ -6,6 +6,7 @@ import Geolocation from './pages/Geolocation';
 import HomePage from './pages/HomePage'
 import LoginPage from './pages/LoginPage'
 import Header from './components/Header'
+import info from './components/info';
 import Regsiter from './pages/Register'
 function App() {
   return (
@@ -16,6 +17,7 @@ function App() {
           <PrivateRoute component={HomePage} path="/" exact/>
           <Route component={LoginPage} path="/login"/>
           <Route component={Regsiter} path="/register" />
+          <Route component={info} path="/info"/>
           <Route component={Geolocation} path="/geolocation"/>
         </AuthProvider>
       </Router>
