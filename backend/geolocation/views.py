@@ -11,20 +11,13 @@ import json
 @api_view(['GET'])
 def ApiInfo(req):
     api_urls = {
-        'all_items': '/',
-        'Search by Category': '/?category=category_name',
-        'Search by Subcategory': '/?subcategory=category_name',
+        'all_items': '/all',
         'Add': '/create',
-        'Update': '/update/pk',
-        'Delete': '/item/pk/delete'
     }
     return Response(api_urls)
 
 @api_view(['GET'])
 def get_all_items(req):
-    if req.query_params:
-        items = geolocation.objects.filter(**req.query_param.dict())
-    else:
         items = geolocation.objects.all()
         data = geoseralizer(items,many=True)
         print(data.data)

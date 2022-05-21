@@ -1,5 +1,3 @@
-from pyexpat import model
-from attr import fields_dict
 from django.db.models import fields
 from rest_framework import serializers
 from .models import geolocation
